@@ -1113,3 +1113,326 @@
   }
 }
 /* --- END PARENT QUESTIONS --- */
+
+
+/* --- DENTALGEN AGE PROGRAMS STYLES --- */
+.c-about_content.-programs {
+  padding: 2.5rem 0 4.5rem;
+  position: relative;
+  z-index: 5;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.c-programs_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.75rem;
+  flex-wrap: wrap;
+}
+
+.c-programs_main_title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.c-programs_title_accent {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  color: #6E44BA;
+  line-height: 1.15;
+}
+
+.c-programs_title_sub {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: 900;
+  color: #141843;
+}
+
+.c-programs_header_bubble {
+  background: #FFFFFF;
+  border: 2px dashed #8B5CF6;
+  border-radius: 24px;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 8px 20px -4px rgba(139, 92, 246, 0.12);
+  max-width: 380px;
+}
+
+.c-programs_bubble_heart {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.c-programs_bubble_text {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #141843;
+  line-height: 1.35;
+}
+
+/* 3 Cards Grid */
+.c-programs_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.c-program_card {
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 30px -6px rgba(20, 24, 67, 0.06);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  position: relative;
+}
+
+.c-program_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -8px rgba(91, 50, 134, 0.16);
+}
+
+.c-program_card.-yellow { border: 2.5px solid #FDE68A; }
+.c-program_card.-pink { border: 2.5px solid #FBCFE8; }
+.c-program_card.-cyan { border: 2.5px solid #BAE6FD; }
+
+.c-program_card_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.c-program_card_label {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.c-program_card_label.-yellow { color: #D97706; }
+.c-program_card_label.-pink { color: #DB2777; }
+.c-program_card_label.-cyan { color: #0284C7; }
+
+.c-program_card_icon {
+  font-size: 1.6rem;
+}
+
+.c-program_card_title {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.15;
+}
+.c-program_card_title.-yellow { color: #D97706; }
+.c-program_card_title.-pink { color: #DB2777; }
+.c-program_card_title.-cyan { color: #0284C7; }
+
+.c-program_card_badge {
+  display: inline-block;
+  align-self: flex-start;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 900;
+  padding: 0.35rem 1.1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+}
+.c-program_card_badge.-yellow { background: #F59E0B; }
+.c-program_card_badge.-pink { background: #F43F5E; }
+.c-program_card_badge.-cyan { background: #0EA5E9; }
+
+.c-program_card_desc {
+  font-size: 1.05rem;
+  color: #1E293B;
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.c-program_card_highlight {
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.45;
+  margin-bottom: 1.5rem;
+}
+.c-program_card_highlight.-yellow { background: #FEF3C7; color: #92400E; }
+.c-program_card_highlight.-pink { background: #FCE7F3; color: #9D174D; }
+.c-program_card_highlight.-cyan { background: #E0F2FE; color: #075985; }
+
+.c-program_btn {
+  display: block;
+  text-align: center;
+  padding: 0.85rem 1.25rem;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.c-program_btn:hover {
+  transform: scale(1.02);
+  filter: brightness(0.95);
+}
+.c-program_btn.-yellow { background: #F59E0B; color: #FFFFFF !important; }
+.c-program_btn.-pink { background: #F43F5E; color: #FFFFFF !important; }
+.c-program_btn.-cyan { background: #0EA5E9; color: #FFFFFF !important; }
+
+/* Bottom Checkup Card */
+.c-checkup_card {
+  background: #FFFFFF;
+  border-radius: 36px;
+  padding: 2.75rem 2.5rem;
+  display: grid;
+  grid-template-columns: 220px 1fr 280px;
+  align-items: center;
+  gap: 2.5rem;
+  border: 2.5px solid #E9D5FF;
+  box-shadow: 0 20px 45px -10px rgba(91, 50, 134, 0.1);
+  position: relative;
+}
+
+.c-checkup_mascot_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-checkup_mascot {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  filter: drop-shadow(0 15px 25px rgba(110, 68, 186, 0.2));
+  animation: toothGrooveDance 3.5s ease-in-out infinite;
+}
+
+.c-checkup_title {
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight: 900;
+  color: #6E44BA;
+  margin: 0 0 1rem 0;
+  line-height: 1.25;
+}
+
+.c-checkup_title_sub {
+  color: #141843;
+}
+
+.c-checkup_age_tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #F3E8FF;
+  color: #7C3AED;
+  padding: 0.4rem 1rem;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.c-checkup_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.c-checkup_list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1E293B;
+  line-height: 1.4;
+}
+
+.c-checkup_check {
+  color: #7C3AED;
+  font-weight: 900;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.c-checkup_pricing {
+  background: #FAF5FF;
+  border: 2px dashed #C084FC;
+  border-radius: 28px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.c-checkup_price_label {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #475569;
+}
+
+.c-checkup_price_pill {
+  background: #E9D5FF;
+  color: #5B21B6;
+  font-size: 2.2rem;
+  font-weight: 900;
+  padding: 0.4rem 1.5rem;
+  border-radius: 18px;
+  display: inline-block;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.c-checkup_price_old {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.c-checkup_price_old del {
+  color: #E11D48;
+  font-weight: 800;
+}
+
+.c-checkup_btn {
+  width: 100%;
+  font-size: 0.95rem !important;
+  padding: 0.85rem 1.25rem !important;
+}
+
+@media (max-width: 1024px) {
+  .c-programs_grid {
+    grid-template-columns: 1fr;
+  }
+  .c-checkup_card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  .c-checkup_mascot {
+    max-width: 150px;
+  }
+  .c-checkup_list li {
+    text-align: left;
+  }
+  .c-checkup_pricing {
+    width: 100%;
+  }
+}
+/* --- END AGE PROGRAMS --- */
