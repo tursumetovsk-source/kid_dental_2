@@ -907,3 +907,35 @@
   }
 }
 /* --- END DENTALGEN SERVICES --- */
+
+
+/* --- CLOUDS BEHIND TEXT FIX --- */
+.c-header_cloud,
+.c-header_cloud.-foreground,
+.c-header_cloud.-background,
+.c-header_cloud.-top {
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.c-header_content {
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+.c-header_mascot {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.c-hero_info_block {
+  position: relative !important;
+  z-index: 30 !important;
+  pointer-events: auto !important;
+}
+
+.c-hero_actions, .c-hero_btn {
+  position: relative !important;
+  z-index: 35 !important;
+}
+/* --- END CLOUDS FIX --- */
