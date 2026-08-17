@@ -14,15 +14,6 @@
   will-change: transform;
 }
 
-@keyframes toothGentleFloat {
-  0%, 100% {
-    transform: translate3d(0, calc(20% * var(--progress, 0)), 0) rotate(-1.5deg) scale(1);
-  }
-  50% {
-    transform: translate3d(0, calc(20% * var(--progress, 0) - 14px), 0) rotate(1.5deg) scale(1.02);
-  }
-}
-
 .c-header_mascot img {
   display: block;
   margin: auto;
@@ -37,6 +28,238 @@
 .c-video_mascot img, .c-footer_mascot {
   animation: toothGentleFloat 3s ease-in-out infinite !important;
   transform-origin: 50% 85% !important;
+}
+
+.c-header_logo path {
+  fill: none !important;
+}
+
+/* --- RIGGED TOOTH CHARACTER --- */
+.c-tooth-rig {
+  position: relative;
+  width: min(52vh, 56vw);
+  aspect-ratio: 1 / 1;
+  margin: calc(var(--unit)*-1) auto 0;
+  transform: translate3d(0, calc(20% * var(--progress, 0)), 0);
+  pointer-events: all;
+  cursor: pointer;
+  filter: drop-shadow(0 15px 30px rgba(91, 50, 134, 0.15));
+}
+
+@media (max-width: 767px) {
+  .c-tooth-rig {
+    width: 75vw;
+    margin: calc(var(--unit-small)*-0.5) auto 0;
+  }
+}
+
+.c-tooth-rig img {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  display: block;
+}
+
+/* 1. Sparkle Pink Back */
+.c-tooth_sparkle.-pink-back {
+  left: 73.33%;
+  top: 51.11%;
+  width: 7.67%;
+  z-index: 1;
+  animation: toothSparklePulse 1.6s ease-in-out infinite 0.4s;
+}
+
+/* 2. Legs */
+.c-tooth_leg.-left {
+  left: 7.78%;
+  top: 46.67%;
+  width: 27.56%;
+  z-index: 2;
+  transform-origin: 75% 20%;
+  animation: toothLegLeftTap 1.4s ease-in-out infinite;
+}
+
+.c-tooth_leg.-right {
+  left: 40.0%;
+  top: 47.78%;
+  width: 26.78%;
+  z-index: 2;
+  transform-origin: 50% 18%;
+  animation: toothLegRightFlex 1.4s ease-in-out infinite;
+}
+
+/* 3. Body Wrap & Face Stack */
+.c-tooth_body_wrap {
+  position: absolute;
+  left: 24.44%;
+  top: 13.33%;
+  width: 52.78%;
+  aspect-ratio: 475 / 474;
+  z-index: 3;
+  transform-origin: 50% 85%;
+  animation: toothBodyGroove 1.4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+.c-tooth_body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100%;
+}
+
+.c-tooth_mouth {
+  left: 35.79%;
+  top: 42.19%;
+  width: 31.37% !important;
+  animation: toothMouthBounce 1.4s ease-in-out infinite;
+}
+
+.c-tooth_glasses {
+  left: 8.42%;
+  top: 13.71%;
+  width: 85.47% !important;
+  animation: toothGlassesBob 1.4s ease-in-out infinite;
+}
+
+.c-tooth_eyebrow.-left {
+  left: 21.05%;
+  top: 1.05%;
+  width: 21.47% !important;
+  animation: toothEyebrowWink 1.4s ease-in-out infinite;
+}
+
+.c-tooth_eyebrow.-right {
+  left: 56.84%;
+  top: 0.0%;
+  width: 21.89% !important;
+  animation: toothEyebrowWink 1.4s ease-in-out infinite 0.1s;
+}
+
+/* 4. Arms */
+.c-tooth_arm.-left {
+  left: 5.56%;
+  top: 6.67%;
+  width: 33.33%;
+  z-index: 4;
+  transform-origin: 70% 91%;
+  animation: toothArmLeftSwing 1.4s ease-in-out infinite;
+}
+
+.c-tooth_arm.-right {
+  left: 60.0%;
+  top: 6.67%;
+  width: 40.0%;
+  z-index: 4;
+  transform-origin: 11% 83%;
+  animation: toothArmRightPump 1.4s ease-in-out infinite;
+}
+
+/* 5. Front Sparkles */
+.c-tooth_sparkle.-blue {
+  left: 20.0%;
+  top: 2.22%;
+  width: 9.44%;
+  z-index: 5;
+  animation: toothSparklePulse 1.8s ease-in-out infinite;
+}
+
+.c-tooth_sparkle.-pink-front {
+  left: 13.33%;
+  top: 34.44%;
+  width: 7.67%;
+  z-index: 5;
+  animation: toothSparklePulse 1.5s ease-in-out infinite 0.8s;
+}
+
+/* --- KEYFRAME ANIMATIONS --- */
+@keyframes toothBodyGroove {
+  0%, 100% {
+    transform: translateY(0) scale(1, 1) rotate(-1.5deg);
+  }
+  25% {
+    transform: translateY(-14px) scale(0.97, 1.03) rotate(1.5deg);
+  }
+  50% {
+    transform: translateY(2px) scale(1.02, 0.98) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-16px) scale(0.96, 1.04) rotate(2deg);
+  }
+}
+
+@keyframes toothArmLeftSwing {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes toothArmRightPump {
+  0%, 100% {
+    transform: rotate(12deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-12deg) translateY(-10px);
+  }
+}
+
+@keyframes toothLegLeftTap {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-8deg) translateY(-12px);
+  }
+}
+
+@keyframes toothLegRightFlex {
+  0%, 100% {
+    transform: scaleY(1) rotate(0deg);
+  }
+  50% {
+    transform: scaleY(0.92) rotate(5deg);
+  }
+}
+
+@keyframes toothEyebrowWink {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes toothMouthBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes toothGlassesBob {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1.5deg);
+  }
+}
+
+@keyframes toothSparklePulse {
+  0%, 100% {
+    transform: scale(0.75) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.25) rotate(180deg);
+    opacity: 1;
+  }
 }
 
 .c-header_logo path {
