@@ -285,3 +285,416 @@
 .c-header_mascot img:hover {
   filter: drop-shadow(0 18px 36px rgba(110, 68, 186, 0.35));
 }
+
+
+/* --- DENTALGEN PROGRAMS & CHECKUP --- */
+.c-programs_section {
+  padding: 3.5rem 1rem 4.5rem;
+  background-color: #FFF6F7;
+  position: relative;
+  z-index: 5;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.c-programs_wrapper {
+  max-width: 1040px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 36px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 16px 40px -10px rgba(91, 50, 134, 0.08);
+  border: 2px solid #F3E8FF;
+}
+
+.c-programs_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.c-programs_main_title {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.c-programs_title_cursive {
+  display: block;
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+  font-weight: 700;
+  color: #6E44BA;
+  letter-spacing: -0.01em;
+}
+
+.c-programs_title_sub {
+  display: block;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: 800;
+  color: #141843;
+  margin-top: 0.25rem;
+}
+
+.c-programs_header_badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.4rem;
+  border: 1.5px solid #E9D5FF;
+  border-radius: 20px;
+  background: #FAF5FF;
+  position: relative;
+}
+
+.c-programs_badge_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-programs_badge_text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #141843;
+  line-height: 1.35;
+}
+
+.c-programs_badge_deco {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  font-size: 1.2rem;
+}
+
+/* 3 Cards Grid */
+.c-programs_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.c-prog_card {
+  border-radius: 24px;
+  padding: 1.8rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.c-prog_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.c-prog_card.-yellow {
+  border: 2px solid #FDE68A;
+  background: #FFFCF2;
+}
+
+.c-prog_card.-pink {
+  border: 2px solid #FBCFE8;
+  background: #FFF5F7;
+}
+
+.c-prog_card.-blue {
+  border: 2px solid #BAE6FD;
+  background: #F0F9FF;
+}
+
+.c-prog_card_header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.c-prog_label {
+  display: block;
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.c-prog_label.-yellow { color: #D97706; }
+.c-prog_label.-pink { color: #E11D48; }
+.c-prog_label.-blue { color: #0284C7; }
+
+.c-prog_name {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin: 0.15rem 0 0 0;
+  line-height: 1.15;
+}
+
+.c-prog_name.-yellow { color: #D97706; }
+.c-prog_name.-pink { color: #E11D48; }
+.c-prog_name.-blue { color: #0284C7; }
+
+.c-prog_icon_circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.c-prog_icon_circle.-yellow {
+  background: #FEF3C7;
+  border: 1.5px solid #FDE68A;
+}
+
+.c-prog_icon_circle.-pink {
+  background: #FCE7F3;
+  border: 1.5px solid #FBCFE8;
+}
+
+.c-prog_icon_circle.-blue {
+  background: #E0F2FE;
+  border: 1.5px solid #BAE6FD;
+}
+
+.c-prog_age_pill {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.35rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1.2rem;
+}
+
+.c-prog_age_pill.-yellow { background: #EAB308; }
+.c-prog_age_pill.-pink { background: #EC4899; }
+.c-prog_age_pill.-blue { background: #06B6D4; }
+
+.c-prog_description {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1E293B;
+  line-height: 1.45;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.c-prog_highlight {
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.c-prog_highlight.-yellow {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.c-prog_highlight.-pink {
+  background: #FCE7F3;
+  color: #BE185D;
+}
+
+.c-prog_highlight.-blue {
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+/* Bottom Checkup Banner */
+.c-checkup_banner {
+  border: 2px solid #DDD6FE;
+  border-radius: 28px;
+  background: #FAF8FF;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 160px 1fr 240px;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+}
+
+.c-checkup_left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-checkup_mascot_img {
+  max-width: 140px;
+  max-height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(110, 68, 186, 0.2));
+  animation: toothGrooveDance 2.4s ease-in-out infinite;
+}
+
+.c-checkup_center {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-checkup_title {
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: #6E44BA;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.2;
+}
+
+.c-checkup_subtitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #141843;
+  margin: 0 0 1.25rem 0;
+}
+
+.c-checkup_details {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.c-checkup_age_badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #EDE9FE;
+  border-radius: 16px;
+  padding: 0.9rem 0.8rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #6E44BA;
+  min-width: 85px;
+  flex-shrink: 0;
+}
+
+.c-checkup_cal_icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.c-checkup_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.c-checkup_list_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.c-checkup_check_icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #EDE9FE;
+  color: #6E44BA;
+  font-size: 0.85rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.c-checkup_list_text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1E293B;
+  line-height: 1.35;
+}
+
+.c-checkup_right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1.5px solid #EDE9FE;
+  border-radius: 24px;
+  padding: 1.5rem 1.25rem;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(110, 68, 186, 0.05);
+}
+
+.c-checkup_star_deco {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 1.2rem;
+}
+
+.c-checkup_price_label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #141843;
+  margin: 0 0 0.5rem 0;
+}
+
+.c-checkup_price_box {
+  background: #EDE9FE;
+  border-radius: 16px;
+  padding: 0.4rem 1.25rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c-checkup_price_current {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #6E44BA;
+  letter-spacing: -0.02em;
+}
+
+.c-checkup_price_old {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #64748B;
+  margin: 0 0 1rem 0;
+}
+
+.c-checkup_strike {
+  text-decoration: line-through;
+  color: #EF4444;
+  font-weight: 800;
+}
+
+.c-checkup_btn {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 14px;
+}
+
+@media (max-width: 960px) {
+  .c-programs_grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .c-checkup_banner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .c-checkup_left {
+    display: none;
+  }
+  .c-checkup_details {
+    flex-direction: column;
+  }
+}
+/* --- END DENTALGEN PROGRAMS --- */
