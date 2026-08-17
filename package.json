@@ -1,0 +1,15 @@
+{
+  "name": "kid_dental_2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Decathlon x Yeye Weller Interactive Experience (kid_dental 2)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "serve ."
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}
