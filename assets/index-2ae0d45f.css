@@ -1640,3 +1640,14 @@
   }
 }
 /* --- END ANIMATED SERVICE CARDS --- */
+
+
+.c-card_program_tag {
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.c-card_program_tag.-yellow { color: #D97706; }
+.c-card_program_tag.-pink { color: #E11D48; }
+.c-card_program_tag.-cyan { color: #0284C7; }
