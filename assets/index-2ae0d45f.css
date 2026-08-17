@@ -198,3 +198,60 @@
   }
 }
 /* --- END HERO DENTAL INFO --- */
+
+@keyframes toothGrooveDance {
+  0% {
+    transform: translate3d(0, calc(15% * var(--progress, 0)), 0) rotate(-2deg) scale(1, 1);
+  }
+  25% {
+    transform: translate3d(0, calc(15% * var(--progress, 0) - 18px), 0) rotate(2.5deg) scale(0.96, 1.04);
+  }
+  50% {
+    transform: translate3d(0, calc(15% * var(--progress, 0) + 3px), 0) rotate(-1deg) scale(1.03, 0.97);
+  }
+  75% {
+    transform: translate3d(0, calc(15% * var(--progress, 0) - 22px), 0) rotate(3deg) scale(0.95, 1.05);
+  }
+  100% {
+    transform: translate3d(0, calc(15% * var(--progress, 0)), 0) rotate(-2deg) scale(1, 1);
+  }
+}
+
+.c-header_mascot {
+  pointer-events: auto !important;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.c-header_mascot img {
+  display: block;
+  margin: calc(var(--unit) * -1) auto 0;
+  max-height: 50vh;
+  max-width: 55vw;
+  animation: toothGrooveDance 2.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite !important;
+  transform-origin: 50% 90% !important;
+  filter: drop-shadow(0 15px 30px rgba(91, 50, 134, 0.15));
+  transition: filter 0.3s ease;
+  will-change: transform;
+}
+
+@media (max-width: 767px) {
+  .c-header_mascot img {
+    margin: calc(var(--unit-small) * -0.5) auto 0;
+    max-height: 42vh;
+    max-width: 75vw;
+  }
+}
+
+.c-header_mascot img:hover {
+  filter: drop-shadow(0 20px 40px rgba(110, 68, 186, 0.35));
+}
+
+.c-video_mascot img, .c-footer_mascot {
+  animation: toothGrooveDance 2.6s ease-in-out infinite !important;
+  transform-origin: 50% 85% !important;
+}
+
+.c-header_logo path {
+  fill: none !important;
+}
