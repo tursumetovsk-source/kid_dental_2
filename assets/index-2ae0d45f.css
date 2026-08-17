@@ -2,30 +2,6 @@
 
 .c-header_logo path{fill:none !important;}
 
-@keyframes toothDance {
-  0%, 100% {
-    transform: translate3d(0, 0, 0) rotate(-3deg) scale(1, 1);
-  }
-  25% {
-    transform: translate3d(0, -22px, 0) rotate(4deg) scale(0.96, 1.05);
-  }
-  50% {
-    transform: translate3d(0, 4px, 0) rotate(-2deg) scale(1.04, 0.95);
-  }
-  75% {
-    transform: translate3d(0, -26px, 0) rotate(5deg) scale(0.95, 1.06);
-  }
-}
-
-@keyframes toothFloat {
-  0%, 100% {
-    transform: translateY(0) rotate(-2.5deg) scale(1);
-  }
-  50% {
-    transform: translateY(-16px) rotate(3deg) scale(1.03);
-  }
-}
-
 .c-header_mascot img {
   animation: toothDance 1.7s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite !important;
   transform-origin: 50% 90% !important;
@@ -36,4 +12,33 @@
   animation: toothFloat 2s ease-in-out infinite !important;
   transform-origin: 50% 85% !important;
   will-change: transform;
+}
+
+@keyframes toothGentleFloat {
+  0%, 100% {
+    transform: translate3d(0, calc(20% * var(--progress, 0)), 0) rotate(-1.5deg) scale(1);
+  }
+  50% {
+    transform: translate3d(0, calc(20% * var(--progress, 0) - 14px), 0) rotate(1.5deg) scale(1.02);
+  }
+}
+
+.c-header_mascot img {
+  display: block;
+  margin: auto;
+  max-height: 55vh;
+  max-width: 60vw;
+  animation: toothGentleFloat 3s ease-in-out infinite !important;
+  transform-origin: 50% 85% !important;
+  filter: drop-shadow(0 15px 25px rgba(91, 50, 134, 0.12));
+  will-change: transform;
+}
+
+.c-video_mascot img, .c-footer_mascot {
+  animation: toothGentleFloat 3s ease-in-out infinite !important;
+  transform-origin: 50% 85% !important;
+}
+
+.c-header_logo path {
+  fill: none !important;
 }
