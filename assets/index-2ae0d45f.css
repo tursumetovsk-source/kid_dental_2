@@ -939,3 +939,173 @@
   z-index: 35 !important;
 }
 /* --- END CLOUDS FIX --- */
+
+
+/* --- DENTALGEN PARENT QUESTIONS STYLES --- */
+.c-faq_philosophy_section {
+  padding: 4rem 1.5rem 5rem;
+  background-color: #FCE8EB;
+  position: relative;
+  z-index: 5;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.c-faq_philosophy_wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 36px;
+  padding: 3.5rem 2.75rem;
+  box-shadow: 0 20px 45px -10px rgba(91, 50, 134, 0.08);
+  border: 2px solid #F3E8FF;
+  position: relative;
+}
+
+/* Floating Stickers */
+.c-faq_deco_star.-tl {
+  position: absolute;
+  top: -16px;
+  left: 24px;
+  font-size: 2rem;
+  animation: toothGrooveDance 3s ease-in-out infinite;
+}
+
+.c-faq_deco_planet.-tr {
+  position: absolute;
+  top: -18px;
+  right: 28px;
+  font-size: 2.2rem;
+  animation: toothGrooveDance 2.7s ease-in-out infinite reverse;
+}
+
+.c-faq_deco_heart.-bl {
+  position: absolute;
+  bottom: 24px;
+  left: -20px;
+  font-size: 2rem;
+  animation: toothGrooveDance 3.2s ease-in-out infinite;
+}
+
+.c-faq_deco_sparkle.-br {
+  position: absolute;
+  bottom: -16px;
+  right: 32px;
+  font-size: 2rem;
+  animation: toothGrooveDance 2.5s ease-in-out infinite;
+}
+
+/* Bubbles Container */
+.c-faq_bubbles_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.75rem;
+}
+
+.c-faq_bubble {
+  background: #FFFFFF;
+  padding: 1.5rem 2rem;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.c-faq_bubble:hover {
+  transform: translateY(-3px) scale(1.01);
+}
+
+.c-faq_bubble.-purple {
+  border: 2.5px dashed #8B5CF6;
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.12);
+}
+
+.c-faq_bubble.-cyan {
+  border: 2.5px solid #06B6D4;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.12);
+  margin-left: auto;
+  max-width: 95%;
+}
+
+.c-faq_bubble.-pink {
+  border: 2.5px solid #F43F5E;
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 10px 25px -5px rgba(244, 63, 94, 0.12);
+}
+
+.c-faq_bubble_qmark {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.c-faq_bubble_qmark.-purple { color: #8B5CF6; }
+.c-faq_bubble_qmark.-cyan { color: #06B6D4; }
+.c-faq_bubble_qmark.-pink { color: #F43F5E; }
+
+.c-faq_bubble_text {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 800;
+  color: #141843;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Story Content */
+.c-faq_story_content {
+  border-top: 2px dashed #E2E8F0;
+  padding-top: 2rem;
+}
+
+.c-faq_story_paragraph {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: #334155;
+  line-height: 1.65;
+  font-weight: 600;
+  margin: 0 0 1.25rem 0;
+}
+
+.c-faq_story_accent {
+  font-weight: 900;
+  color: #6E44BA;
+  font-size: 1.05em;
+}
+
+.c-faq_actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  .c-faq_philosophy_wrapper {
+    padding: 2.25rem 1.25rem;
+    border-radius: 24px;
+  }
+  .c-faq_bubble {
+    padding: 1.1rem 1.25rem;
+    gap: 1rem;
+    max-width: 100% !important;
+  }
+  .c-faq_bubble_qmark {
+    font-size: 2.4rem;
+  }
+  .c-faq_actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-faq_actions .c-hero_btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+/* --- END PARENT QUESTIONS --- */
